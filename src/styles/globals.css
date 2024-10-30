@@ -19,3 +19,53 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+.object-cover {
+  height: 100%;
+}
+.round-box {
+  display: flex;
+  justify-content: flex-end;
+}
+.red-box-text {
+  position: relative;
+  left: 40px;
+  background: #bc133bcc;
+  z-index: 1;
+}
+.image-preview {
+  position: relative;
+  left: -40px;
+}
+.card-box {
+  background: #e1e8f0;
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 30px 0 0 30px;
+  padding: 10px 17px;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.card-box.active {
+  background: #bc133bcc;
+  color: #fff;
+}
+.card-box.active span {
+  color: #fff;
+}
+.card-box span {
+  color: #bc133bcc;
+}
+.row .col-md-7 {
+  width: 70%;
+}
+.row .col-md-5 {
+  width: 30%;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
