@@ -69,3 +69,10 @@ body {
   max-width: 900px;
   margin: 0 auto;
 }
+.card-box:hover {
+  background: #c94262 !important;
+  color: #fff;
+}
+.card-box:hover span {
+  color: #fff !important;
+}
