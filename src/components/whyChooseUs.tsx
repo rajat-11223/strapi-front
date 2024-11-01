@@ -1,5 +1,5 @@
 // components/WhyChooseUs/WhyChooseUs.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 interface Feature {
@@ -21,6 +21,13 @@ const WhyChooseUs = ({
   features,
   expertImage,
 }: WhyChooseUsProps) => {
+  const [activeFeatureId, setActiveFeatureId] = useState(features[0].id);
+  const [featureIndex, setFeaureIndex] = useState(0);
+
+  const handleFeatureClick = (featureId: any, featureIndex: any) => {
+    setActiveFeatureId(featureId);
+    setFeaureIndex(featureIndex)
+  };
   return (
     <section className="py-16 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-12">
@@ -41,7 +48,7 @@ const WhyChooseUs = ({
             <div className="text-white">
               <h4 className="text-xl font-semibold mb-4">Industry experts</h4>
               <p className="text-sm opacity-90">
-                {features[0]?.description}
+                {features[featureIndex]?.description}
               </p>
             </div>
           </div>
@@ -62,10 +69,13 @@ const WhyChooseUs = ({
         {/* Right side feature list */}
         <div className='col-md-5'>
         <div className="card">
-          {features.map((feature) => (
+          {features.map((feature, index) => (
             <div
               key={feature.id}
-              className="flex items-center transition-transform hover:translate-x-2 card-box"
+              className={`flex items-center transition-transform hover:translate-x-2  hover:bg-red-600 card-box ${
+                activeFeatureId === feature.id ? 'active' : ''
+              }`}
+              onClick={() => handleFeatureClick(feature.id, index)}
             >
               <span className="text-red-600 mr-4">&lt;</span>
               <div>

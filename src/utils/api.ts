@@ -5,11 +5,11 @@ export async function getWhyChooseUsContent() {
 
   const response = await fetch(
     `${process.env.STRAPI_API_URL}/api/why-choose-us?populate=*`,
-    // {
-    //   headers: {
-    //     Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`,
-    //   },
-    // }
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`,
+      },
+    }
   );
 //   console.log('responseee',response)
   if (!response.ok) {

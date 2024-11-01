@@ -7,6 +7,7 @@ interface WhyChooseUsData {
   title: string;
   subtitle: string;
   expertImage: {
+    url: string, 
     formats: {
       medium: {
         url: string;
@@ -32,7 +33,7 @@ export default function HomePage({ whyChooseUsData }: HomePageProps) {
         title={whyChooseUsData.title}
         subtitle={whyChooseUsData.subtitle}
         features={whyChooseUsData.features}
-        expertImage={whyChooseUsData.expertImage.formats.medium.url}
+        expertImage={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${whyChooseUsData.expertImage.formats?.medium?.url || whyChooseUsData.expertImage.url}`}
       />
     </main>
   );
