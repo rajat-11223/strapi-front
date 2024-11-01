@@ -46,7 +46,7 @@ const WhyChooseUs = ({
         <div className="round-box">
           <div className="w-72 h-72 bg-red-600 rounded-full flex items-center justify-center p-8 red-box-text">
             <div className="text-white">
-              <h4 className="text-xl font-semibold mb-4">Industry experts</h4>
+              <h4 className="text-xl font-semibold mb-4">{features[featureIndex]?.title}</h4>
               <p className="text-sm opacity-90">
                 {features[featureIndex]?.description}
               </p>
