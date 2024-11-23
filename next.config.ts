@@ -13,8 +13,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '**',
-        port: '**',
+        hostname: 'eykgkr34q4.execute-api.ap-south-1.amazonaws.com',
         pathname: '/**',
       },
     ],
