@@ -27,6 +27,7 @@ interface HomePageProps {
 }
 
 export default function HomePage({ whyChooseUsData }: HomePageProps) {
+  console.log(process.env.STRAPI_API_URL, "STRAPI_API_URLSTRAPI_API_URL", process.env)
   console.log(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${whyChooseUsData.expertImage.formats?.medium?.url || whyChooseUsData.expertImage.url}`, "lkjlkjlkjlkjlkj")
   return (
     <main>
